@@ -4,13 +4,186 @@
 <html>
 <head>
 	<title>Forecast</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: #bdd7ff;
+    }
+    
+  .menu{
+      width: 35px;
+      height: 5px;
+      background-color: black;
+      margin: 6px 0;
+    }
+    
+    .text {
+  }
+    .city{
+      display: inline-block;
+      text-align: center;
+      position: relative; 
+      top: 60px;
+      left: 55px;
+      font-weight: bold;
+      font-size: 50pt;
+    }
+    
+    .weather {
+      display: flex;
+      flex-direction: row;
+      margin: 5px;
+      
+      text-align: center;
+      position: relative; 
+      top: 0px;
+      left: 100px;
+      font-weight: 100;
+      font-size: 20pt;
+      
+    }
+    
+    .wItems {
+      margin: 20px;
+    }
+    
+    #first {
+      font-size: 100px;
+    }
+ 
+    .other {
+      position: relative;
+      top: 75px;
+      left: -10px;
+    }
+    
+    .time {
+      display: flex;
+      flex-direction: row;
+      margin: 5px;
+      
+      text-align: center;
+      position: relative; 
+      top: -70px;
+      left: 120px;
+      font-weight: 100;
+      font-size: 14pt;
+      
+    }
+    
+    .tItems { 
+      margin: 30px;
+    }
+    
+    #firstTime {
+      font-size: 30px;
+    }
+    
+    .otherTime {
+      position: relative;
+      top: 10px;
+      left: -10px;
+    }
+    
+    .icons {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+    }
+    
+  /*  #campfire {
+      position: relative; 
+      top: -80px;
+      left: 50px;
+    }
+    
+    #hiking {
+      position: relative;
+      top: 40px;
+      left: -50px;
+       
+    }*/
+    
+    .rowOne {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: -80px;
+      left: 50px;
+    }
+    
+    .rowTwo {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: -70px;
+      left: 50px;
+    }
+    
+  </style>
 </head>
+  
+  
 <body>
 	<!-- your single-location forecast interface here -->
+  <div>
+      <div class="menu"></div>
+      <div class="menu"></div>
+      <div class="menu"></div>
+    </div>
+  
+  <div class="city text">
+    <p>
+      BERKELEY
+    </p>
+  </div>
+  
+  <div class="weather text">
+    <p class="wItems" id="first">
+      82
+    </p>
+    <p class="wItems other">
+      80
+    </p>
+    <p class="wItems other">
+      79
+    </p >
+  </div>
+  
+  <div class="time text">
+    <p class="tItems" id="firstTime">
+      Now
+    </p>
+    <p class="tItems otherTime">
+      16
+    </p>
+    <p class="tItems otherTime">
+      17
+    </p>
+  </div>
+  
+  <div class="sun">
+    
+  </div>
+  
+  <div class="rowOne">
+    <img class="icons" id="campfire" src="https://static.thenounproject.com/png/15126-200.png">
+    <img class="icons" id="sailing" src="https://cdn3.iconfinder.com/data/icons/water-sports-and-recreation-tours/512/Water_sports_and_recreation_tours_Sailing-512.png">
+      <img class="icons" id="running" src="https://cdn4.iconfinder.com/data/icons/misc-vol-2/512/man_person_run_runner_running-512.png">
+    
+</div>
+  <div class="rowTwo">
+    <img class="icons" id="hiking" src="https://cdn2.iconfinder.com/data/icons/sport-ii/79/08-512.png">  
+    <img class="icons" id="alcohol" src="https://static.thenounproject.com/png/7377-200.png">  
+     <img class="icons" id="shopping" src="https://cdn4.iconfinder.com/data/icons/transportation-96/64/shopping-Bag-shop-Gift-512.png"> 
+</div>
+  
+  
+  
 </body>
 </html>
 

@@ -4,12 +4,188 @@
 <html>
 <head>
 	<title>Comparison</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+<!--link rel="stylesheet" type="text/css" href="assets/styles/AlbumPage.css" /-->
+  
+  
+  
+  <style>
+    body {
+     background-image: url("https://www.bgs.ac.uk/discoveringGeology/geologyOfBritain/makeamap/images/coastline.png");
+     background-position: top center;
+     background-repeat: no-repeat;
+     background-attachment: scroll;
+     background-size: cover;
+     height: 100%;
+     background-color: #d8dde6;
+     margin: 10px;
+    }
+    
+    .topBox {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .menu{
+      width: 35px;
+      height: 5px;
+      background-color: black;
+      margin: 6px 0;
+    }
+    
+    .compareBox { 
+      display: inline-block;
+      position: relative;
+      left: 35%;
+      
+    }
+    
+    #compareOptions {
+      display: flex;
+      flex-direction:row;
+      justify-content: center;
+      background-color: rgba(173, 202, 247, 0.3);
+    }
+    
+    .bold{
+      font-size: 25px;
+    }
+    
+    #mapText {
+      color: #4287f5;
+    }
+    
+    #graphText {
+      color: #f5f9ff;
+    }
+    
+    .cities {
+      display: inline-block;
+      text-align: center;
+      background-color: rgba(173, 202, 247, 0.7);
+    }
+    
+    .ctext {
+     margin: 0px;
+    }
+    
+    .temp {
+      font-size: 30px;
+      padding-bottom: 0px;
+    }
+    
+    #liverpool {
+      position: relative;
+      top: 229px;
+      left: 30px;
+    }
+    
+    #dublin {
+      position: relative;
+      top: 209px;
+      left: -19px;
+    }
+     
+    .bottomBox {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      margin: 0px 40px 15px 0px;
+    }
+    
+    .box{
+      padding: 2px;
+      border:1px solid #4287f5;
+      background-color: rgba(173, 202, 247, 0.3);   
+    }
+    
+    .blueBox {
+      color: #4287f5;
+      margin: 5px;
+    }
+    
+    .zoom {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+        
+    }
+  </style>
 </head>
+  
+  
+  
 <body>
+  
 	<!-- your comparison interface here -->
+  <div id="map"></div>
+  
+  <div class="topBox">
+    <div>
+      <div class="menu"></div>
+      <div class="menu"></div>
+      <div class="menu"></div>
+    </div>
+    
+    <input type="text" placeholder="Dublin, Ireland" aria-label="Search">
+ </div>
+  
+  <div class="compareBox">
+  <div id="compareOptions">
+    <p class="compareType bold" id="mapText">
+      Map
+    </p>
+    <p class="bold">
+      |
+    </p>
+    <p class="compareType bold" id="graphText">
+      Graph
+    </p>
+  </div>
+  </div>
+  
+  <div class="cities" id="dublin">
+    <p class="temp ctext">
+      61
+    </p>
+    <p class="city ctext">
+      Dublin
+    </p>
+  </div>
+  
+  <div class="cities" id="liverpool">
+    <p class="temp ctext">
+      70
+    </p>
+    <p class="city ctext">
+      Liverpool
+    </p>
+  </div>
+  
+  <div class="bottomBox">
+    
+    <div class="box">
+      <p class="blueBox">
+      COMPARISON
+    </p> 
+    </div>
+    
+    <div class="zoom">
+      <span class="glyphicon glyphicon-zoom-out"></span>
+      <span class="glyphicon glyphicon-zoom-in"></span>
+    </div>
+  </div>
+          
 </body>
 </html>
